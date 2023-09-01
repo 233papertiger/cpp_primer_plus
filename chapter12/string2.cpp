@@ -87,28 +87,18 @@ const char & String::operator[](int i) const {
     return str[i];
 }
 
-String String::Stringlower() const {
-    char *ptr = new char[len+1];
-    strcpy(ptr, str);
+void String::Stringlower() {
     for ( int i=0; i<len; ++i) {
-        if ( isalpha(ptr[i]) ) 
-            ptr[i] = tolower(ptr[i]);
+        if ( isalpha(str[i]) ) 
+            str[i] = tolower(str[i]);
     }
-    String ret(ptr);
-    delete[] ptr;
-    return ret;
 }
 
-String String::Stringupper() const{
-    char *ptr = new char[len+1];
-    strcpy(ptr, str);
+void String::Stringupper() {
     for ( int i=0; i<len; ++i) {
-        if ( isalpha(ptr[i]) ) 
-            ptr[i] = toupper(ptr[i]);
+        if ( isalpha(str[i]) ) 
+            str[i] = toupper(str[i]);
     }
-    String ret(ptr);
-    delete[] ptr;
-    return ret;
 }
 
 int String::charCount(char ch) const {

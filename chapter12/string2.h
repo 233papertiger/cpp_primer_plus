@@ -27,8 +27,8 @@ class String{
     	char & operator[](int i);
     	
     	const char & operator[](int i) const;
-    	String Stringlower() const;
-    	String Stringupper() const;
+    	void Stringlower();
+    	void Stringupper();
     
     	int charCount(char ch) const;
     
